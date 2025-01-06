@@ -1,21 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=Alegreya:wght@400;500;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5e6d3;
+  --foreground: #2c1810;
+  --primary: #8b4513;
+  --secondary: #654321;
+  --accent: #d4af37;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1a0f0f;
+    --foreground: #e2d5c3;
+    --primary: #cd7f32;
+    --secondary: #a0522d;
+    --accent: #ffd700;
   }
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Alegreya", serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "MedievalSharp", cursive;
 }

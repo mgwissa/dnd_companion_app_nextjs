@@ -11,6 +11,16 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        accent: "var(--accent)",
+      },
+      fontFamily: {
+        medieval: ["MedievalSharp", "cursive"],
+        fantasy: ["Alegreya", "serif"],
+      },
+      borderWidth: {
+        "3": "3px",
       },
     },
   },
