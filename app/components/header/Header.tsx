@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeaderLinks from "./HeaderLinks";
 
 // Define your routes
 const routes = [
@@ -14,18 +15,7 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center">
           <h1 className="font-medieval text-2xl text-primary">D&D Companion</h1>
-          <div className="flex gap-6">
-            {routes.map((route) => (
-              <Link
-                key={route.path}
-                href={route.path}
-                className="font-fantasy text-lg hover:text-accent transition-colors duration-300 relative group"
-              >
-                {route.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all duration-300 group-hover:w-full"></span>
-              </Link>
-            ))}
-          </div>
+          <HeaderLinks routes={routes} />
         </div>
       </nav>
     </header>

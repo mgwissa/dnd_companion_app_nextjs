@@ -1,6 +1,12 @@
+"use client";
+
 import Link from "next/link";
+import { useContext } from "react";
+import { UserContext } from "./context/UserContext";
 
 export default function Home() {
+  const { isLoggedIn, user } = useContext(UserContext);
+
   return (
     <main className="container mx-auto px-4 py-8">
       <div className="max-w-2xl mx-auto text-center">
@@ -10,10 +16,13 @@ export default function Home() {
           character details, and campaign resources all in one place.
         </p>
         <div className="space-y-4">
-          <p className="text-gray-600">Please log in to access your campaign materials</p>
-          <Link href="/auth" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
-            Login / Sign Up
-          </Link>
+          {isLoggedIn ? (
+            <p>Welcome back, {user?.email}</p>
+          ) : (
+            <Link href="/auth" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors">
+                Login / Sign Up
+            </Link>
+          )}
         </div>
       </div>
     </main>
