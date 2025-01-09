@@ -10,6 +10,9 @@
   },
   "dependencies": {
     "@firebase/auth": "^1.8.1",
+    "@tiptap/pm": "^2.11.0",
+    "@tiptap/react": "^2.11.0",
+    "@tiptap/starter-kit": "^2.11.0",
     "@types/js-cookie": "^3.0.6",
     "firebase": "^11.1.0",
     "js-cookie": "^3.0.5",

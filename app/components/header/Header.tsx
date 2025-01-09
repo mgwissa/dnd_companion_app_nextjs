@@ -1,4 +1,3 @@
-import Link from "next/link";
 import HeaderLinks from "./HeaderLinks";
 
 // Define your routes
@@ -6,6 +5,7 @@ const routes = [
   { path: "/", label: "Tavern" },
   { path: "/notes", label: "Quest Log" },
   { path: "/backstory", label: "Chronicles" },
+  { path: "/campaigns", label: "Campaigns" },
   { path: "/next", label: "Arcane Docs" },
 ];
 
